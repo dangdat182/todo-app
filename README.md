@@ -40,7 +40,7 @@ Web app quản lý công việc với kiến trúc microservice, React frontend,
 
 ### 1. Clone repo và copy env
 ```bash
-git clone https://github.com/<your-username>/todo-app.git
+git clone https://github.com/dangdat182/todo-app.git
 cd todo-app
 cp .env.example .env
 ```

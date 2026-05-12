@@ -1,0 +1,11 @@
+node_modules/
+.env
+*.log
+.DS_Store
+dist/
+build/
+.nyc_output/
+coverage/
+
+# Claude Code local settings (personal, not for team)
+.claude/settings.local.json

@@ -1,0 +1,24 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(Start-Service \"com.docker.service\" -ErrorAction Stop)",
+      "PowerShell(Get-Service \"com.docker.service\")",
+      "PowerShell(Stop-Process -Force)",
+      "PowerShell(Start-Process \"C:\\\\Program Files\\\\Docker\\\\Docker\\\\Docker Desktop.exe\")"
+    ]
+  },
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write",
+        "hooks": [
+          {
+            "type": "prompt",
+            "prompt": "Code was just modified. Check if the edited file is CLAUDE.md itself — if so, skip this. Otherwise: update the Change Log section in CLAUDE.md with today's date and a one-line summary of what changed. Also update any relevant sections (features, structure, API endpoints, etc.) if the change affects them.",
+            "statusMessage": "Updating CLAUDE.md..."
+          }
+        ]
+      }
+    ]
+  }
+}
